@@ -509,3 +509,84 @@ a { color: inherit; }
   color: #4f5965;
   font-style: italic;
 }
+
+
+.media-card-text {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #4f5f76;
+  line-height: 1.5;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Keep About page highlight cards sized to their content on larger screens */
+.about-highlight,
+.highlight-card,
+.info-card,
+.about-card,
+.about .highlight-card,
+.about .info-card {
+  height: fit-content;
+  align-self: flex-start;
+}
+
+/* Footer mobile wrapping */
+.footer a[href^="mailto:"],
+.footer .text-white-50,
+.contact-email {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+/* Contact page polish */
+.contact-intro-card,
+.contact-next-steps,
+.next-step-card {
+  background: #fff;
+  border: 1px solid rgba(15, 46, 86, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 14px 40px rgba(15, 46, 86, 0.07);
+}
+
+.contact-intro-card {
+  padding: 1.75rem;
+}
+
+.contact-next-steps {
+  padding: 2rem;
+}
+
+.next-step-card {
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.next-step-card h3 {
+  color: var(--rr-blue);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.next-step-card p {
+  color: #4f5f76;
+  line-height: 1.6;
+}
+
+.contact-card a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 575.98px) {
+  .contact-next-steps {
+    padding: 1.25rem;
+  }
+
+  .contact-intro-card {
+    padding: 1.25rem;
+  }
+}

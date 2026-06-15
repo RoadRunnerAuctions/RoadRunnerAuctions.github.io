@@ -1,4 +1,14 @@
 const Home = {
+  methods: {
+    mediaCardText(title) {
+      const textByTitle = {
+        "Current Auctions": "Browse active auctions and place bids online through HiBid.",
+        "Selling Items": "Contact Roadrunner Auctions about items, collections, equipment, or estate property.",
+        "Pickup Details": "Auction-specific pickup details are provided after the auction closes."
+      };
+      return textByTitle[title] || "";
+    }
+  },
   props: {
     home: { type: Object, required: true },
     company: { type: Object, required: true }
@@ -79,7 +89,7 @@ const Home = {
           <div class="col-lg-7">
             <div class="placeholder-grid">
               <div class="photo-placeholder" v-for="item in home.mediaPreview.placeholders" :key="item">
-                <span>{{ item }}</span>
+                <span>{{ item }}<p class="media-card-text mb-0 mt-2">{{ mediaCardText(item) }}</p></span>
               </div>
             </div>
           </div>

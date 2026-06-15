@@ -35,8 +35,8 @@ const About = {
 
       <section class="section-pad">
         <div class="text-center mx-auto mb-4" style="max-width: 760px;">
-          <h2 class="section-title">Ready for owner-approved content</h2>
-          <p class="muted mb-0">These areas give the page room to grow without adding unconfirmed information.</p>
+          <h2 class="section-title">Roadrunner Auctions Information</h2>
+          <p class="muted mb-0">Key buyer, seller, and auction information is organized below.</p>
           <div class="owner-content-needed text-start">
             <strong>Owner Content Needed</strong>
             <span>Company history, team information, service area details, or any background you want visitors to know.</span>

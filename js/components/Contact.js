@@ -25,24 +25,27 @@ const Contact = {
         <p class="hero-text">{{ contact.intro }}</p>
       </section>
 
-      <section class="section-pad">
-        <div class="row g-4">
+      <section class="section-pad contact-page">
+        <div class="row g-4 align-items-start">
           <div class="col-lg-5">
-            <h2 class="section-title">{{ contact.sectionTitle }}</h2>
-            <p class="muted">{{ contact.text }}</p>
-            <div class="owner-content-needed">
-              <strong>Owner Content Needed</strong>
-              <span>Please confirm preferred phone number, email address, business address, HiBid link, and any social media links.</span>
-            </div>
-            <div class="d-flex flex-wrap gap-3 mt-4">
-              <a class="btn-rr-primary" :href="company.phoneHref">Call Now</a>
-              <a class="btn-rr-secondary" :href="company.emailHref">Email Us</a>
+            <div class="contact-intro-card">
+              <h2 class="section-title">{{ contact.sectionTitle }}</h2>
+              <p class="muted">{{ contact.text }}</p>
+              <div class="owner-content-needed">
+                <strong>Owner Content Needed</strong>
+                <span>Please confirm preferred phone number, email address, business address, HiBid link, and any social media links.</span>
+              </div>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a class="btn-rr-primary" :href="company.phoneHref">Call Now</a>
+                <a class="btn-rr-secondary" :href="company.emailHref">Email Us</a>
+              </div>
             </div>
           </div>
+
           <div class="col-lg-7">
             <div class="row g-3">
               <div class="col-md-6" v-for="card in contact.cards" :key="card.title">
-                <div class="contact-card">
+                <div class="contact-card h-100">
                   <h3>{{ card.title }}</h3>
                   <p class="muted mb-0" v-if="card.type === 'address'">
                     <span v-for="line in company.addressLines" :key="line">{{ line }}<br /></span>
@@ -54,6 +57,36 @@ const Contact = {
                     <p class="muted mb-3">{{ card.text }}</p>
                     <a class="btn-rr-secondary" :href="cardHref(card)" target="_blank" rel="noopener">{{ card.buttonLabel }}</a>
                   </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-next-steps mt-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="eyebrow">Next Steps</div>
+              <h2 class="section-title mb-2">Ready to get started?</h2>
+              <p class="muted mb-0">
+                Buyers can view current auctions online. Sellers can contact Roadrunner Auctions to discuss items, collections, equipment, or estate property.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="next-step-card">
+                    <h3>For Buyers</h3>
+                    <p>Browse active auction listings and bid online through HiBid.</p>
+                    <a class="btn-rr-primary" :href="company.hibidUrl" target="_blank" rel="noopener">View Current Auctions</a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="next-step-card">
+                    <h3>For Sellers</h3>
+                    <p>Contact Roadrunner Auctions about selling items through auction.</p>
+                    <a class="btn-rr-secondary" :href="company.emailHref">Contact Roadrunner</a>
+                  </div>
                 </div>
               </div>
             </div>
