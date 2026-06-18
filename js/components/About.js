@@ -17,7 +17,7 @@ const About = {
             <p class="muted" v-for="paragraph in about.paragraphs" :key="paragraph">{{ paragraph }}</p>
           </div>
           <div class="col-lg-5">
-            <div class="info-card highlight-card">
+            <div class="info-card highlight-card about-highlight-card">
               <h3>{{ about.highlight.title }}</h3>
               <p class="muted mb-0">{{ about.highlight.text }}</p>
             </div>

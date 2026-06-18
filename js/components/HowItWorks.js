@@ -27,6 +27,21 @@ const HowItWorks = {
           </div>
         </div>
       </section>
+
+      <section class="section-pad section-muted border-top">
+        <div class="text-center mx-auto mb-4" style="max-width: 760px;">
+          <h2 class="section-title">{{ howItWorks.faqTitle }}</h2>
+          <p class="muted mb-0">{{ howItWorks.faqIntro }}</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6" v-for="faq in howItWorks.faqs" :key="faq.question">
+            <div class="faq-card">
+              <h3>{{ faq.question }}</h3>
+              <p class="muted mb-0">{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   `
 };

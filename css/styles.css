@@ -590,3 +590,74 @@ a { color: inherit; }
     padding: 1.25rem;
   }
 }
+
+/* Final polish: keep card groups visually even without forcing standalone highlight cards tall */
+.row > [class*="col-"]:has(> .info-card),
+.row > [class*="col-"]:has(> .step-card),
+.row > [class*="col-"]:has(> .service-card),
+.row > [class*="col-"]:has(> .content-slot),
+.row > [class*="col-"]:has(> .contact-card),
+.row > [class*="col-"]:has(> .next-step-card),
+.row > [class*="col-"]:has(> .faq-card) {
+  display: flex;
+}
+
+.row > [class*="col-"] > .info-card,
+.row > [class*="col-"] > .step-card,
+.row > [class*="col-"] > .service-card,
+.row > [class*="col-"] > .content-slot,
+.row > [class*="col-"] > .contact-card,
+.row > [class*="col-"] > .next-step-card,
+.row > [class*="col-"] > .faq-card {
+  width: 100%;
+}
+
+.about-highlight-card {
+  height: auto;
+  align-self: flex-start;
+}
+
+.info-card:not(.about-highlight-card),
+.step-card,
+.service-card,
+.content-slot,
+.contact-card,
+.next-step-card,
+.faq-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card a,
+.next-step-card a,
+.contact-card .btn-rr-secondary {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.faq-card {
+  background: #fff;
+  border: 1px solid var(--rr-border);
+  border-radius: 20px;
+  padding: 1.35rem;
+  box-shadow: 0 10px 24px rgba(70, 55, 45, 0.06);
+}
+
+.faq-card h3 {
+  color: var(--rr-blue-dark);
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+
+@media (max-width: 767px) {
+  .row > [class*="col-"]:has(> .info-card),
+  .row > [class*="col-"]:has(> .step-card),
+  .row > [class*="col-"]:has(> .service-card),
+  .row > [class*="col-"]:has(> .content-slot),
+  .row > [class*="col-"]:has(> .contact-card),
+  .row > [class*="col-"]:has(> .next-step-card),
+  .row > [class*="col-"]:has(> .faq-card) {
+    display: block;
+  }
+}

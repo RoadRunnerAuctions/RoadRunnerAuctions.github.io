@@ -133,6 +133,14 @@ const siteData = {
       { title: "Discuss Items", text: "Share details about the items, collection, estate property, or equipment." },
       { title: "Plan Auction", text: "Roadrunner Auctions can explain available next steps based on the items and situation." },
       { title: "Go Online", text: "Auction items can be presented to online bidders through HiBid." }
+    ],
+    faqTitle: "Common Auction Questions",
+    faqIntro: "These general answers point visitors to the right place without replacing the terms for a specific auction.",
+    faqs: [
+      { question: "Where can I view current auctions?", answer: "Current Roadrunner Auctions listings are available through HiBid. Use the View Auctions button to browse active auctions and lots." },
+      { question: "Do I need a HiBid account to bid?", answer: "Online bidding is handled through HiBid, so bidders should register or sign in on HiBid before placing bids." },
+      { question: "Where do I find payment and pickup instructions?", answer: "Payment, pickup, and auction-specific instructions are listed with each auction and may also be included with bidder invoices after an auction closes." },
+      { question: "Should I review auction terms before bidding?", answer: "Yes. Always review the terms, pickup details, closing times, and lot information for the specific auction before placing bids." }
     ]
   },
 
