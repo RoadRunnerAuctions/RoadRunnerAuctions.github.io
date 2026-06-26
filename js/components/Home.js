@@ -1,12 +1,7 @@
 const Home = {
   methods: {
-    mediaCardText(title) {
-      const textByTitle = {
-        "Current Auctions": "Browse active auctions and place bids online through HiBid.",
-        "Selling Items": "Contact Roadrunner Auctions about items, collections, equipment, or estate property.",
-        "Pickup Details": "Auction-specific pickup details are provided after the auction closes."
-      };
-      return textByTitle[title] || "";
+    enabledAppointmentLinks() {
+      return (this.home.appointmentSection?.links || []).filter(link => link.enabled);
     }
   },
   props: {
@@ -45,6 +40,29 @@ const Home = {
         </div>
       </section>
 
+      <section class="section-pad appointment-section border-bottom" v-if="home.appointmentSection && enabledAppointmentLinks().length">
+        <div class="text-center mx-auto" style="max-width: 860px;">
+          <div class="eyebrow">Pickup Scheduling</div>
+          <h2 class="section-title">{{ home.appointmentSection.title }}</h2>
+          <p class="muted mb-2">{{ home.appointmentSection.subtitle }}</p>
+          <p class="pickup-location mb-4">
+            <strong>{{ home.appointmentSection.locationLabel }}:</strong>
+            <span v-for="line in company.addressLines" :key="line">{{ line }}<span v-if="line !== company.addressLines[company.addressLines.length - 1]">, </span></span>
+          </p>
+          <div class="appointment-links">
+            <a
+              v-for="link in enabledAppointmentLinks()"
+              :key="link.label + link.href"
+              class="appointment-link"
+              :href="link.href || '#'"
+              :target="link.external ? '_blank' : null"
+              :rel="link.external ? 'noopener' : null"
+            >{{ link.label }}</a>
+          </div>
+        </div>
+      </section>
+
+
       <section class="section-pad section-muted border-bottom">
         <div class="text-center mx-auto mb-4" style="max-width: 760px;">
           <h2 class="section-title">{{ home.servicesIntro.title }}</h2>
@@ -70,27 +88,6 @@ const Home = {
                 <li v-for="item in home.sellerSection.items" :key="item">{{ item }}</li>
               </ul>
               <a class="btn-rr-secondary" :href="home.sellerSection.button.href">{{ home.sellerSection.button.label }}</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-pad section-muted border-top">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-5">
-            <h2 class="section-title">{{ home.mediaPreview.title }}</h2>
-            <p class="muted">{{ home.mediaPreview.text }}</p>
-            <div class="owner-content-needed">
-              <strong>Owner Content Needed</strong>
-              <span>Auction, equipment, facility, or company photos can be added in this section.</span>
-            </div>
-            <a class="btn-rr-secondary" :href="home.mediaPreview.button.href">{{ home.mediaPreview.button.label }}</a>
-          </div>
-          <div class="col-lg-7">
-            <div class="placeholder-grid">
-              <div class="photo-placeholder" v-for="item in home.mediaPreview.placeholders" :key="item">
-                <span>{{ item }}<p class="media-card-text mb-0 mt-2">{{ mediaCardText(item) }}</p></span>
-              </div>
             </div>
           </div>
         </div>

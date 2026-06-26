@@ -23,18 +23,6 @@ const Services = {
       </section>
 
       <section class="section-pad">
-        <div class="expand-card">
-          <div>
-            <h2>{{ services.expandSection.title }}</h2>
-            <p class="muted mb-0">{{ services.expandSection.text }}</p>
-          </div>
-          <div class="mini-placeholders" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-pad pt-0">
         <div class="callout d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
           <div><h2 class="h3 fw-bold mb-2">{{ services.callout.title }}</h2><p class="mb-0">{{ services.callout.text }}</p></div>
           <a class="btn-rr-primary bg-white border-white shadow-none" :href="services.callout.button.href">{{ services.callout.button.label }}</a>

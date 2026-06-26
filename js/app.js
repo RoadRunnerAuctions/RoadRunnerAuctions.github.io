@@ -34,12 +34,12 @@ createApp({
     pageMeta() {
       const metaByPage = {
         '/': {
-          title: 'Roadrunner Auctions | Online Auctions in Albuquerque, NM',
-          description: 'Roadrunner Auctions provides online auction services in Albuquerque, New Mexico. Browse current auctions, register to bid, and learn more about bidding and selling through auction.'
+          title: 'Roadrunner Auctions | Online Auctions Based in Albuquerque, NM',
+          description: 'Roadrunner Auctions is based in Albuquerque, New Mexico, offering professional online auctions with buyers across the United States and Canada. Browse current auctions, register to bid, or learn about selling through auction.'
         },
         '/about': {
-          title: 'About Roadrunner Auctions | Albuquerque Auction Company',
-          description: 'Learn more about Roadrunner Auctions, an Albuquerque auction company connecting buyers and sellers through online auctions.'
+          title: 'About Roadrunner Auctions | Online Auction Company',
+          description: 'Learn more about Roadrunner Auctions, an online auction company based in Albuquerque, New Mexico, connecting sellers with buyers across the United States and Canada.'
         },
         '/services': {
           title: 'Auction Services | Roadrunner Auctions',
@@ -50,13 +50,13 @@ createApp({
           description: 'Learn how Roadrunner Auctions works for bidders and sellers, including registration, online bidding, auction terms, payment, and pickup information.'
         },
         '/contact': {
-          title: 'Contact Roadrunner Auctions | Albuquerque, NM',
-          description: 'Contact Roadrunner Auctions in Albuquerque, New Mexico with questions about current auctions, bidding, pickup, consignments, or estate auction services.'
+          title: 'Contact Roadrunner Auctions | Online Auctions Based in Albuquerque',
+          description: 'Contact Roadrunner Auctions with questions about current auctions, bidding, pickup, shipping, consignments, or estate auction services.'
         }
       };
       return metaByPage[this.cleanRoute] || {
         title: 'Roadrunner Auctions',
-        description: 'Roadrunner Auctions provides online auction services in Albuquerque, New Mexico.'
+        description: 'Roadrunner Auctions provides online auction services based in Albuquerque, New Mexico.'
       };
     },
     currentPageProps() {

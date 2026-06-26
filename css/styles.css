@@ -400,31 +400,6 @@ a { color: inherit; }
   }
 }
 
-.placeholder-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.photo-placeholder {
-  min-height: 180px;
-  border: 1px dashed rgba(24, 58, 103, 0.35);
-  border-radius: 22px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.86), rgba(237,243,251,0.96)),
-    radial-gradient(circle at top right, rgba(245,181,23,0.22), transparent 40%);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 1.25rem;
-  color: var(--rr-blue-dark);
-  font-weight: 900;
-  box-shadow: 0 10px 24px rgba(70, 55, 45, 0.06);
-}
-
-.photo-placeholder.large {
-  min-height: 240px;
-}
 
 .content-slot,
 .expand-card {
@@ -478,60 +453,56 @@ a { color: inherit; }
 }
 
 @media (max-width: 767px) {
-  .placeholder-grid {
-    grid-template-columns: 1fr;
-  }
-
   .expand-card {
     align-items: flex-start;
     flex-direction: column;
   }
 }
 
-
-/* Owner review callouts - remove before public launch */
-.owner-content-needed {
-  background: #fff8e1;
-  border: 1px solid rgba(244, 196, 48, 0.85);
-  border-left: 6px solid #f4c430;
-  border-radius: 12px;
-  padding: 1rem 1.15rem;
-  margin: 1.25rem 0;
-  box-shadow: 0 8px 24px rgba(20, 33, 61, 0.08);
-}
-.owner-content-needed strong {
-  display: block;
-  color: #14213d;
-  font-weight: 800;
-  margin-bottom: .25rem;
-}
-.owner-content-needed span {
-  color: #4f5965;
-  font-style: italic;
+/* Homepage pickup appointment links */
+.appointment-section {
+  background:
+    radial-gradient(circle at top left, rgba(245, 181, 23, 0.18), transparent 30%),
+    linear-gradient(180deg, #fff, var(--rr-soft-blue));
 }
 
-
-.media-card-text {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #4f5f76;
-  line-height: 1.5;
-  max-width: 240px;
-  margin-left: auto;
-  margin-right: auto;
+.pickup-location {
+  color: var(--rr-blue-dark);
+  font-size: 1.05rem;
 }
 
-
-/* Keep About page highlight cards sized to their content on larger screens */
-.about-highlight,
-.highlight-card,
-.info-card,
-.about-card,
-.about .highlight-card,
-.about .info-card {
-  height: fit-content;
-  align-self: flex-start;
+.appointment-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
+
+.appointment-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  background: var(--rr-red);
+  color: #fff;
+  border: 1px solid var(--rr-red);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(220, 32, 46, 0.22);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.appointment-link:hover,
+.appointment-link:focus {
+  background: var(--rr-red-dark);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(220, 32, 46, 0.26);
+}
+
 
 /* Footer mobile wrapping */
 .footer a[href^="mailto:"],
@@ -660,4 +631,58 @@ a { color: inherit; }
   .row > [class*="col-"]:has(> .faq-card) {
     display: block;
   }
+}
+
+/* Compact FAQ accordion */
+.faq-accordion {
+  max-width: 880px;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--rr-border);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(70, 55, 45, 0.06);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 1.25rem;
+  color: var(--rr-blue-dark);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--rr-soft-blue);
+  color: var(--rr-blue-dark);
+  font-weight: 900;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  padding: 0 1.25rem 1.15rem;
+  line-height: 1.65;
 }

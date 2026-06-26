@@ -32,26 +32,6 @@ const About = {
           </div>
         </div>
       </section>
-
-      <section class="section-pad">
-        <div class="text-center mx-auto mb-4" style="max-width: 760px;">
-          <h2 class="section-title">Roadrunner Auctions Information</h2>
-          <p class="muted mb-0">Key buyer, seller, and auction information is organized below.</p>
-          <div class="owner-content-needed text-start">
-            <strong>Owner Content Needed</strong>
-            <span>Company history, team information, service area details, or any background you want visitors to know.</span>
-          </div>
-        </div>
-        <div class="row g-3">
-          <div class="col-md-4" v-for="slot in about.contentSlots" :key="slot.title">
-            <div class="content-slot">
-              <div class="slot-icon">+</div>
-              <h3>{{ slot.title }}</h3>
-              <p class="muted mb-0">{{ slot.text }}</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   `
 };

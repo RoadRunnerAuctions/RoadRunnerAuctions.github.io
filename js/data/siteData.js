@@ -1,9 +1,9 @@
 const siteData = {
   company: {
     name: "Roadrunner Auctions",
-    tagline: "Online auctions serving Albuquerque and Central New Mexico",
+    tagline: "Online auctions based in Albuquerque with buyers across the U.S. and Canada",
     locationShort: "Albuquerque, New Mexico",
-    serviceArea: "Albuquerque and Central New Mexico",
+    serviceArea: "Online auctions with buyers across the U.S. and Canada",
     phone: "505-717-1839",
     phoneHref: "tel:5057171839",
     email: "roadrunnerauctionsnm@gmail.com",
@@ -23,27 +23,40 @@ const siteData = {
 
   home: {
     eyebrow: "Roadrunner Auctions",
-    title: "Online auctions in Albuquerque and Central New Mexico.",
+    title: "Professional Online Auctions for Buyers & Sellers",
     intro: [
-      "Roadrunner Auctions provides online auction information and auction services for buyers and sellers throughout Albuquerque and Central New Mexico.",
-      "Browse active auctions through HiBid, place bids online, and schedule local pickup for winning items."
+      "Serving buyers from across the United States, Canada, and beyond. Based in Albuquerque, New Mexico, Roadrunner Auctions connects buyers and sellers through professionally managed online auctions.",
+      "Whether you are looking to bid on unique items or sell a collection, estate, or business assets, we are here to make the auction process simple and straightforward."
     ],
     buttons: [
       { label: "View Current Auctions", href: "https://roadrunnerauctions.hibid.com/", external: true, style: "primary" },
-      { label: "How Bidding Works", href: "#/how-it-works", style: "secondary" }
+      { label: "For Sellers", href: "#/services", style: "secondary" }
     ],
+    appointmentSection: {
+      title: "Auction Pickup Appointments",
+      subtitle: "Won an item? Use the auction-specific links below to schedule your pickup appointment when pickup scheduling is available.",
+      locationLabel: "Pickup Location",
+      links: [
+        // OWNER EDIT AREA:
+        // Change the label and href for each appointment form button.
+        // Add as many buttons as needed by copying one line.
+        // Set enabled to false to hide a button without deleting it.
+        { enabled: true, label: "Schedule Auction Pickup", href: "#", external: true },
+        { enabled: true, label: "Schedule Another Pickup Day", href: "#", external: true }
+      ]
+    },
     quickPanel: {
       title: "Looking for auction listings?",
       text: "Current auctions, lots, bidding, and invoices are handled through HiBid."
     },
     servicesIntro: {
       title: "Auction Information for Buyers and Sellers",
-      text: "Buyers can browse current auctions through HiBid, while sellers can contact Roadrunner Auctions about consignments, estates, collections, equipment, and other local auction needs."
+      text: "Buyers can browse current auctions through HiBid, while sellers can contact Roadrunner Auctions about consignments, estates, collections, equipment, and other auction needs."
     },
     featureCards: [
       { title: "Buy Online", text: "Browse current auctions, register, and place bids through HiBid." },
       { title: "Sell Items", text: "Contact Roadrunner Auctions about items, collections, equipment, or estate property." },
-      { title: "Local Pickup", text: "Winning bidders receive pickup details after the auction closes." }
+      { title: "Auction Pickup", text: "Winning bidders receive pickup details and appointment information after the auction closes." }
     ],
     sellerSection: {
       title: "Selling items or handling an estate?",
@@ -55,12 +68,6 @@ const siteData = {
       items: ["Estate auctions", "Consignments", "Collections", "Equipment and business assets"],
       button: { label: "View Services", href: "#/services" }
     },
-    mediaPreview: {
-      title: "Auction Services",
-      text: "Whether you are bidding online or exploring selling opportunities, Roadrunner Auctions provides clear information for buyers and sellers.",
-      button: { label: "Contact Roadrunner", href: "#/contact" },
-      placeholders: ["Current Auctions", "Selling Items", "Pickup Details"]
-    },
     callout: {
       title: "Ready to view current auctions?",
       text: "Current auction listings and online bidding are available through Roadrunner Auctions on HiBid.",
@@ -71,44 +78,33 @@ const siteData = {
   about: {
     eyebrow: "About",
     title: "About Roadrunner Auctions.",
-    intro: "Roadrunner Auctions provides online auction services for buyers, sellers, consignors, and estate representatives throughout Albuquerque and Central New Mexico.",
+    intro: "Roadrunner Auctions provides online auction services for buyers, sellers, consignors, and estate representatives from its Albuquerque, New Mexico location.",
     sectionTitle: "Connecting buyers and sellers through online auctions",
     paragraphs: [
       "Roadrunner Auctions connects sellers with bidders through online auctions. Buyers can view current auctions through HiBid, while sellers can contact Roadrunner Auctions directly to discuss auction options.",
-      "The focus is straightforward: current auction access for bidders, clear contact information for sellers, and local auction information for the Albuquerque area."
+      "The focus is straightforward: current auction access for bidders, clear contact information for sellers, and online auction information for buyers near and far."
     ],
     highlight: {
-      title: "Local and online",
-      text: "Online bidding gives buyers access to current auctions, while pickup information and seller conversations stay connected to the Albuquerque area."
+      title: "Based in Albuquerque, bidding online",
+      text: "Online bidding connects Roadrunner Auctions with buyers across the United States, Canada, and sometimes beyond, while pickup and seller conversations stay connected to the Albuquerque location."
     },
     cards: [
       { title: "For Buyers", text: "Browse current auctions, register online, place bids through HiBid, and follow auction-specific pickup instructions after closing." },
       { title: "For Sellers", text: "Ask about selling items, collections, equipment, or estate property through an online auction format." },
       { title: "For Estates", text: "Contact Roadrunner Auctions to discuss estate auction needs and available next steps." }
-    ],
-    contentSlots: [
-      { title: "Current Auctions", text: "Auction listings and online bidding are available through HiBid." },
-      { title: "Buyer Information", text: "Bidders can review active listings, register online, and follow auction-specific instructions." },
-      { title: "Seller Information", text: "Sellers can contact Roadrunner Auctions about items, collections, equipment, and estate property." }
     ]
   },
 
   services: {
     eyebrow: "Services",
     title: "Auction services and online auction information.",
-    intro: "Roadrunner Auctions lists current auctions through HiBid and provides local auction services for sellers throughout Albuquerque and Central New Mexico.",
+    intro: "Roadrunner Auctions lists current auctions through HiBid and provides auction information for buyers, sellers, and estate representatives.",
     cards: [
-      { title: "Online Auctions", text: "Current auction listings, bidding, and lot information are available through HiBid.", linkLabel: "View HiBid", href: "https://roadrunnerauctions.hibid.com/", external: true },
-      { title: "Estate Auctions", text: "For families or representatives interested in selling estate items through auction.", linkLabel: "Contact Us", href: "#/contact" },
-      { title: "Consignments", text: "For individuals with items, collections, or assets they would like to discuss selling through auction.", linkLabel: "Ask About Selling", href: "#/contact" },
-      { title: "Collections", text: "Auction options for groups of items, personal collections, and specialty property.", linkLabel: "Start a Conversation", href: "#/contact" },
-      { title: "Equipment", text: "Auction options for equipment, tools, and business-related items when appropriate.", linkLabel: "Get Details", href: "#/contact" },
-      { title: "Pickup Information", text: "Winning bidders receive auction-specific pickup information after the auction closes.", linkLabel: "Learn More", href: "#/how-it-works" }
+      { title: "Current Auctions", text: "Browse active auction listings, registration details, bidding, and lot information through HiBid.", linkLabel: "View HiBid", href: "https://roadrunnerauctions.hibid.com/", external: true },
+      { title: "Selling Through Auction", text: "Contact Roadrunner Auctions to discuss items you may want to sell through an online auction.", linkLabel: "Ask About Selling", href: "#/contact" },
+      { title: "Estate Auction Questions", text: "Families and estate representatives can reach out to discuss auction-related next steps.", linkLabel: "Contact Us", href: "#/contact" },
+      { title: "Pickup Information", text: "Winning bidders receive auction-specific payment and pickup details after an auction closes.", linkLabel: "How It Works", href: "#/how-it-works" }
     ],
-    expandSection: {
-      title: "More Auction Information",
-      text: "Contact Roadrunner Auctions about auction needs not listed above."
-    },
     callout: {
       title: "Have items to sell?",
       text: "Contact Roadrunner Auctions to discuss what you have and ask about available next steps.",
@@ -126,7 +122,7 @@ const siteData = {
       { title: "View Auctions", text: "Open the Roadrunner Auctions HiBid page to browse current listings." },
       { title: "Register", text: "Create or sign in to your bidding account through HiBid." },
       { title: "Bid Online", text: "Place bids during the auction period and review closing times carefully." },
-      { title: "Pay & Pickup", text: "Follow invoice, payment, and pickup instructions after the auction closes." }
+      { title: "Pay & Pickup", text: "Follow invoice, payment, and pickup instructions after the auction closes. When available, pickup appointment links are posted on the homepage." }
     ],
     sellerSteps: [
       { title: "Contact", text: "Call or email Roadrunner Auctions with basic information about the items you would like to sell." },
@@ -135,12 +131,20 @@ const siteData = {
       { title: "Go Online", text: "Auction items can be presented to online bidders through HiBid." }
     ],
     faqTitle: "Common Auction Questions",
-    faqIntro: "These general answers point visitors to the right place without replacing the terms for a specific auction.",
+    faqIntro: "Quick answers for buyers, winning bidders, and people interested in selling through Roadrunner Auctions.",
     faqs: [
       { question: "Where can I view current auctions?", answer: "Current Roadrunner Auctions listings are available through HiBid. Use the View Auctions button to browse active auctions and lots." },
-      { question: "Do I need a HiBid account to bid?", answer: "Online bidding is handled through HiBid, so bidders should register or sign in on HiBid before placing bids." },
-      { question: "Where do I find payment and pickup instructions?", answer: "Payment, pickup, and auction-specific instructions are listed with each auction and may also be included with bidder invoices after an auction closes." },
-      { question: "Should I review auction terms before bidding?", answer: "Yes. Always review the terms, pickup details, closing times, and lot information for the specific auction before placing bids." }
+      { question: "How do I register to bid?", answer: "Online bidding is handled through HiBid. Create or sign in to your HiBid account, review the auction terms, and register for the auction before placing bids." },
+      { question: "How do I schedule pickup?", answer: "Pickup is by appointment. When scheduling links are available, use the appointment buttons on the homepage and make sure to submit the form after making your selection." },
+      { question: "When can I pick up won items?", answer: "Roadrunner Auctions currently lists buyer pickup as Wednesday or Thursday only. Always review the instructions for your specific auction and invoice." },
+      { question: "Is there a buyer's premium?", answer: "Yes. Roadrunner Auctions lists a buyer's premium on won items, and auction descriptions may include auction-specific premium details. Review each auction's terms before bidding." },
+      { question: "Can items be shipped?", answer: "Shipping information should be checked on each specific auction. Roadrunner Auctions ships to buyers across the United States and Canada, and other locations may be handled depending on the item and auction details." },
+      { question: "I'm interested in selling items. How do I get started?", answer: "Email Roadrunner Auctions to request a drop-off appointment. Available drop-off days and times are limited, and you will receive the next available day and time by return email." },
+      { question: "How many items can I drop off?", answer: "Roadrunner Auctions lists a maximum of 30 lots per scheduled drop off, and each lot should potentially sell for at least $20." },
+      { question: "Does Roadrunner Auctions clean, repair, or lot consignor items?", answer: "No. Consignors arrange their items into lots as they want them sold. Roadrunner Auctions states that they do not lot, clean, or repair items and may reject items found to be in unsalable condition." },
+      { question: "Does Roadrunner Auctions offer pickup or delivery service?", answer: "Roadrunner Auctions does not offer pickup or delivery service at this time." },
+      { question: "When do consignors get paid?", answer: "Roadrunner Auctions lists payment as ready the next day after the auction closes. Use the scheduler to make an appointment for payment and any unsold items." },
+      { question: "I have another question. How can I reach you?", answer: "Call, email, or use the Contact page for auction questions, pickup questions, or seller inquiries." }
     ]
   },
 
@@ -148,14 +152,14 @@ const siteData = {
   contact: {
     eyebrow: "Contact",
     title: "Contact Roadrunner Auctions.",
-    intro: "Contact Roadrunner Auctions with questions about current auctions, bidding, pickup, consignments, and estate auction services.",
+    intro: "Whether you are bidding in an upcoming auction, scheduling a pickup, or interested in selling items, Roadrunner Auctions is here to help.",
     sectionTitle: "Contact information",
-    text: "For current auction details, visit HiBid. For seller questions or general questions, call or email Roadrunner Auctions directly.",
+    text: "For current auction details, visit HiBid. For pickup, seller, or general questions, call or email Roadrunner Auctions directly.",
     cards: [
       { title: "Phone", type: "phone" },
       { title: "Email", type: "email" },
       { title: "Location", type: "address" },
-      { title: "Current Auctions", type: "hibid", text: "Browse active auctions through HiBid.", buttonLabel: "Open HiBid" }
+      { title: "Current Auctions", type: "hibid", text: "Browse active auctions through HiBid from wherever you bid.", buttonLabel: "Open HiBid" }
     ]
   },
 

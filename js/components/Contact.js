@@ -31,10 +31,6 @@ const Contact = {
             <div class="contact-intro-card">
               <h2 class="section-title">{{ contact.sectionTitle }}</h2>
               <p class="muted">{{ contact.text }}</p>
-              <div class="owner-content-needed">
-                <strong>Owner Content Needed</strong>
-                <span>Please confirm preferred phone number, email address, business address, HiBid link, and any social media links.</span>
-              </div>
               <div class="d-flex flex-wrap gap-3 mt-4">
                 <a class="btn-rr-primary" :href="company.phoneHref">Call Now</a>
                 <a class="btn-rr-secondary" :href="company.emailHref">Email Us</a>
