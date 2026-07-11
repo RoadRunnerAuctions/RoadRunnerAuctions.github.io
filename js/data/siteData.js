@@ -41,8 +41,8 @@ const siteData = {
         // Change the label and href for each appointment form button.
         // Add as many buttons as needed by copying one line.
         // Set enabled to false to hide a button without deleting it.
-        { enabled: true, label: "Schedule Auction Pickup", href: "#", external: true },
-        { enabled: true, label: "Schedule Another Pickup Day", href: "#", external: true }
+        { enabled: true, label: "Coming soon!", href: "#", external: true },
+        { enabled: true, label: "Coming soon!", href: "#", external: true }
       ]
     },
     quickPanel: {
