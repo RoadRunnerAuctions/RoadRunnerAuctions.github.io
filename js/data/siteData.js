@@ -1,3 +1,12 @@
+const appointmentLinks = [
+  // ===========================================================
+  // OWNER QUICK EDITS
+  // Edit labels and links below. Add or remove buttons as needed.
+  // ===========================================================
+  { enabled: true, label: "Coming soon!", href: "#", external: true },
+  { enabled: true, label: "Coming soon!", href: "#", external: true }
+];
+
 const siteData = {
   company: {
     name: "Roadrunner Auctions",
@@ -36,14 +45,7 @@ const siteData = {
       title: "Auction Pickup Appointments",
       subtitle: "Won an item? Use the auction-specific links below to schedule your pickup appointment when pickup scheduling is available.",
       locationLabel: "Pickup Location",
-      links: [
-        // OWNER EDIT AREA:
-        // Change the label and href for each appointment form button.
-        // Add as many buttons as needed by copying one line.
-        // Set enabled to false to hide a button without deleting it.
-        { enabled: true, label: "Coming soon!", href: "#", external: true },
-        { enabled: true, label: "Coming soon!", href: "#", external: true }
-      ]
+      links: appointmentLinks
     },
     quickPanel: {
       title: "Looking for auction listings?",
